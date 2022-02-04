@@ -1,5 +1,3 @@
-import time
-laiks=time.strftime("%d-%m-%y %H:%M")
 atbilde=("jā")
 jaut=("jā")
 treneri_v=["Juris Ozols","x", "Tomas Liepa", "Edvards Kalniņš", "Linus Bruņinieks", "Santa Balode"]
@@ -16,7 +14,7 @@ reitingu_skaits=[2,2,2,2,2,2]
 reitings=[9,10,8,6,9,2]
 abonesanas_skaits=[3,4,5,2]
 abomenti=["1 treniņš nedēļā: 5 eiro","2 treniņi nedēļā: 10 eiro","4 treniņi nedēļā: 20 eiro","7 treniņi nedēļā: 30 eiro"]
-abonetaji=[]
+abonetaji=["tel. num., personas kods:5720 aboments:2"]
 run=True
 while run==True:
   for i in range(len(reitings)):
@@ -46,10 +44,7 @@ while run==True:
           if trenins_jaut==("jā"):
             trenins_laiks=("uzrakstat laiku diena")
           treneris_pietekums_jaut=("vai gribat pieteikt treniņu?")
-          if treneris_pietekums_jaut==("jā"):
-            print(f"laiks un datums tagad {laiks}")
-            pietekums.append(str(input("ievdi apaļu skaitli ,piemēram 15:00 vai 15:30, un datumu (diena , mēn ,gads) ar cipariem (tādā pašā secībā kā izprintēts laiks): ")))
-          atbilde==str(input("vai vēlaties iziet no sava profila?"))
+          break
         elif i==len(paroles)-1:
           print("Nepareizs vārds, vai parole.")
           atbilde=str(input("vai mēģināsiet velreiz?: "))
@@ -72,8 +67,8 @@ while run==True:
             if i==len(abonetaji)-1:
               print("Ievadīti nepareizi dati.")
               jaut=str(input("vai mēģināsiet velreiz?: "))
-          for i in range (len(paroles)):
-            print(f"treneris/e: {treneri_v[i]} apraksts:   {treneris_apraksts[i]} pieejams: {treneris_pieejams[i]} reitings:{zvaigznes[i]}")
+        for i in range (len(paroles)):
+          print(f"treneris/e: {treneri_v[i]} apraksts:   {treneris_apraksts[i]} pieejams: {treneris_pieejams[i]} reitings:{zvaigznes[i]}")
           novertesasa=str(input("vai gribat novērtēt treneri?: "))
           if novertesasa==("jā"):
             karta=int(input(f"kuru pēckārtas skatoties no kreisās malas sarakstā {treneri_v} treneri jūs gribat novērtēt (rakstat ar skaitļiem bez punkta) "))
